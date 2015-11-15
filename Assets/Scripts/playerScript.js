@@ -6,6 +6,10 @@ var frames : float = 0;
 var lane : int = 2;
 var camObj : GameObject;
 var cam : cameraScript;
+var velocity : float;
+var stage1 : ParticleSystem;
+var stage2 : ParticleSystem;
+var stage3 : ParticleSystem;
 
 function Start () 
 {
@@ -16,6 +20,8 @@ function Start ()
 
 function Update () 
 {
+	velocity = rb.velocity.y;
+
 	if(Input.GetKeyDown(KeyCode.Return))
 	{
 		frames = Time.deltaTime * 3;
@@ -58,6 +64,41 @@ function Update ()
 	{
 		transform.position.x = -camObj.transform.position.z / 2;
 	}
+	
+	if ( stage1.isStopped && velocity > 15 )
+	{
+		stage1.Play(true);
+	}
+	
+	else if ( velocity < 15 && stage1.isPlaying )
+	{
+		stage1.Stop(true);
+	}
+	
+	if ( stage2.isStopped && velocity > 60 )
+	{
+		stage2.Play(true);
+	}
+	
+	else if ( velocity < 60 && stage2.isPlaying )
+	{
+		stage2.Stop(true);
+	}
+	
+	if ( stage3.isStopped && velocity > 180 )
+	{
+		stage3.Play(true);
+	}
+	
+	else if ( velocity < 180 && stage3.isPlaying )
+	{
+		stage3.Stop(true);
+	}
+	
+	if ( transform.position.y > 5000 )
+	{
+		rb.gravityScale = 0;
+	}
 }
 
 function OnCollisionEnter2D(other : Collision2D)
@@ -65,6 +106,6 @@ function OnCollisionEnter2D(other : Collision2D)
 	if (other.gameObject.name == ("Web(Clone)"))
 	{
 		Destroy(other.gameObject);
-		Destroy(this.gameObject);
+		rb.AddForce(new Vector3 (0, -200, 0));
 	}
 }

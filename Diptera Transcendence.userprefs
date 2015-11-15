@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerScript.js">
     <Files>
-      <File FileName="Assets\Scripts\webScript.js" Line="5" Column="1" />
-      <File FileName="Assets\Scripts\spawnerScript.js" Line="12" Column="2" />
-      <File FileName="Assets\Scripts\cameraScript.js" Line="11" Column="20" />
-      <File FileName="Assets\Scripts\playerScript.js" Line="59" Column="2" />
-      <File FileName="F:\Game Dev\real\GroupGame-master\Game_Dev_Group_Project\Assets\scripts\playerScript.js" Line="10" Column="1" />
+      <File FileName="Assets\Scripts\webScript.js" Line="41" Column="23" />
+      <File FileName="Assets\Scripts\spawnerScript.js" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\playerScript.js" Line="100" Column="23" />
+      <File FileName="Assets\Scripts\cameraScript.js" Line="20" Column="3" />
+      <File FileName="Assets\GUIScript.js" Line="30" Column="89" />
+      <File FileName="F:\Game Dev\real\GroupGame-master\Game_Dev_Group_Project\Assets\scripts\GUIscore.js" Line="2" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
