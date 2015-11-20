@@ -16,7 +16,7 @@ function Update ()
 {
 	if(playerRB.velocity.y > 0)
 	{
-		offset = initOffset + new Vector3(0, playerRB.velocity.y / 4, -playerRB.velocity.y);
+		offset = initOffset + new Vector3(0, playerRB.velocity.y / 16, -playerRB.velocity.y / 4);
 	}
 		transform.position = new Vector3 (0, player.transform.position.y, 0) + offset;
 }

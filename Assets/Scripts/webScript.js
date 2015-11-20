@@ -32,7 +32,7 @@ function Update ()
 	
 	if ( playerScript.velocity > 0)
 	{
-		scale = 1 + playerScript.velocity / 10;
+		scale = 1 + playerScript.velocity / 40;
 		transform.localScale = new Vector3(scale, scale, 1);
 	}
 	

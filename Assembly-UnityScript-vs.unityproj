@@ -46,11 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GUIScript.js" />
+     <Compile Include="Assets\Scripts\GUIScript.js" />
      <Compile Include="Assets\Scripts\cameraScript.js" />
      <Compile Include="Assets\Scripts\playerScript.js" />
      <Compile Include="Assets\Scripts\spawnerScript.js" />
+     <Compile Include="Assets\Scripts\vibration.js" />
      <Compile Include="Assets\Scripts\webScript.js" />
+     <Compile Include="Assets\sky.js" />
+     <Compile Include="Assets\space.js" />
+     <Compile Include="Assets\stars.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

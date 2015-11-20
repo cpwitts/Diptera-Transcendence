@@ -10,12 +10,14 @@ var velocity : float;
 var stage1 : ParticleSystem;
 var stage2 : ParticleSystem;
 var stage3 : ParticleSystem;
+var animator : Animator;
 
 function Start () 
 {
 	rb = GetComponent(Rigidbody2D);
 	camObj = GameObject.Find("Main Camera");
     cam = camObj.GetComponent("cameraScript");
+    animator = GetComponent("Animator");
 }
 
 function Update () 
@@ -25,8 +27,7 @@ function Update ()
 	if(Input.GetKeyDown(KeyCode.Return))
 	{
 		frames = Time.deltaTime * 3;
-		print("frames set");
-		print(Time.deltaTime);
+		animator.SetBool("fly", true);
 	}
 	
 	if(Input.GetKeyDown(KeyCode.Q) && lane > 1)
@@ -42,9 +43,8 @@ function Update ()
 	if (frames > 0)
 	{
 		rb.AddForce(new Vector3 (0, (jumpPower/3), 0));
-		print("jump applied");
 		frames -= Time.deltaTime;
-		if (frames < 0)
+		if (frames <= 0)
 		{
 			frames = 0;
 		}

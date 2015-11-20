@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 668f17fd4c6ffb642bc60cbd4a20f8a2
-timeCreated: 1447098516
+guid: 33a095e773fbf564da89728786a4eb57
+timeCreated: 1448037257
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: fly_0
-    21300002: fly_1
+    21300000: fly2_0
+    21300002: fly2_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,7 +51,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: fly_0
+    - name: fly2_0
       rect:
         serializedVersion: 2
         x: 7
@@ -61,7 +61,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: fly_1
+    - name: fly2_1
       rect:
         serializedVersion: 2
         x: 109
