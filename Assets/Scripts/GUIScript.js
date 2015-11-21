@@ -23,7 +23,7 @@ function Update()
 	progressStyle.fontSize = 10 + percent * 0.4;
 	if ( !finished )
 	{
-		time = Time.time;
+		time = Time.timeSinceLevelLoad;
 	}
 }
 

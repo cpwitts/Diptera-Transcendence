@@ -11,6 +11,7 @@ var stage1 : ParticleSystem;
 var stage2 : ParticleSystem;
 var stage3 : ParticleSystem;
 var animator : Animator;
+var boost : AudioSource;
 
 function Start () 
 {
@@ -18,6 +19,7 @@ function Start ()
 	camObj = GameObject.Find("Main Camera");
     cam = camObj.GetComponent("cameraScript");
     animator = GetComponent("Animator");
+    boost = GetComponent("AudioSource");
 }
 
 function Update () 
@@ -70,7 +72,7 @@ function Update ()
 		stage1.Play(true);
 	}
 	
-	else if ( velocity < 15 && stage1.isPlaying )
+	else if ( velocity < 10 && stage1.isPlaying )
 	{
 		stage1.Stop(true);
 	}
@@ -80,7 +82,7 @@ function Update ()
 		stage2.Play(true);
 	}
 	
-	else if ( velocity < 60 && stage2.isPlaying )
+	else if ( velocity < 50 && stage2.isPlaying )
 	{
 		stage2.Stop(true);
 	}
@@ -90,7 +92,7 @@ function Update ()
 		stage3.Play(true);
 	}
 	
-	else if ( velocity < 180 && stage3.isPlaying )
+	else if ( velocity < 170 && stage3.isPlaying )
 	{
 		stage3.Stop(true);
 	}
@@ -99,6 +101,16 @@ function Update ()
 	{
 		rb.gravityScale = 0;
 	}
+	
+	if (Input.GetKey("escape"))
+	{
+		Application.Quit();
+	}
+
+	if (Input.GetKeyDown(KeyCode.T))
+	{
+		Application.LoadLevel (Application.loadedLevel);
+	}	
 }
 
 function OnCollisionEnter2D(other : Collision2D)
@@ -106,6 +118,16 @@ function OnCollisionEnter2D(other : Collision2D)
 	if (other.gameObject.name == ("Web(Clone)"))
 	{
 		Destroy(other.gameObject);
-		rb.AddForce(new Vector3 (0, -200, 0));
+		rb.AddForce(new Vector3 (0, -400, 0));
+	}
+}
+
+function OnTriggerEnter2D(other : Collider2D)
+{
+	if (other.gameObject.name == ("Nectar(Clone)"))
+	{
+		Destroy(other.gameObject);
+		rb.AddForce(new Vector3 (0, 200, 0));
+		boost.Play();
 	}
 }

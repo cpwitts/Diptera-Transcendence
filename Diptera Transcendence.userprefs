@@ -2,15 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerScript.js">
     <Files>
-      <File FileName="Assets\sky.js" Line="10" Column="15" />
-      <File FileName="Assets\Scripts\playerScript.js" Line="20" Column="9" />
-      <File FileName="Assets\Scripts\cameraScript.js" Line="12" Column="22" />
-      <File FileName="Assets\Scripts\webScript.js" Line="6" Column="23" />
-      <File FileName="Assets\Scripts\spawnerScript.js" Line="14" Column="18" />
-      <File FileName="Assets\space.js" Line="22" Column="2" />
-      <File FileName="Assets\stars.js" Line="1" Column="15" />
-      <File FileName="Assets\Scripts\GUIScript.js" Line="6" Column="24" />
-      <File FileName="Assets\Scripts\vibration.js" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\webScript.js" Line="43" Column="2" />
+      <File FileName="Assets\Scripts\playerScript.js" Line="95" Column="13" />
+      <File FileName="Assets\Scripts\spawnerScript.js" Line="16" Column="19" />
+      <File FileName="..\..\..\UNITY PROJECTS\Unity Tutorials\Assets\Scripts\PlayerController.cs" Line="28" Column="1" />
+      <File FileName="Assets\Scripts\GUIScript.js" Line="26" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
